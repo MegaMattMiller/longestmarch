@@ -15,7 +15,7 @@ const daysSince = computed(() => {
   return diffDays + 13
 })
 
-function nth(d) {
+function nth(d: number) {
   const dString = String(d)
   const last = +dString.slice(-2)
   if (last > 3 && last < 21) return 'th'
@@ -31,7 +31,7 @@ function nth(d) {
   }
 }
 
-function numberWithCommas(x) {
+function numberWithCommas(x: number) {
   return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
 }
 </script>
